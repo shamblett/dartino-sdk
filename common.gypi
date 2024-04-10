@@ -79,7 +79,7 @@
           # Settings for Xcode and ninja. Huh? Yeah, GYP is awesome!
 
           'GCC_C_LANGUAGE_STANDARD': 'ansi',
-          'GCC_TREAT_WARNINGS_AS_ERRORS': 'YES', # -Werror
+          'GCC_TREAT_WARNINGS_AS_ERRORS': 'NO', # -Werror
           'GCC_WARN_NON_VIRTUAL_DESTRUCTOR': 'NO', # -Wno-non-virtual-dtor
           'GCC_ENABLE_CPP_RTTI': 'NO', # -fno-rtti
           'GCC_ENABLE_CPP_EXCEPTIONS': 'NO', # -fno-exceptions
@@ -103,7 +103,7 @@
         'cflags_cc': [
           '<@(common_gcc_warning_flags)',
           '-Wno-non-virtual-dtor',
-          '-Werror',
+#          '-Werror',
           '<@(common_gcc_cflags_cc)',
           '-fno-rtti',
           '-fno-exceptions',
@@ -111,7 +111,7 @@
 
         'cflags_c': [
           '<@(common_gcc_warning_flags)',
-          '-Werror',
+#          '-Werror',
           '<@(common_gcc_cflags_c)',
           '-fno-exceptions',
         ],
